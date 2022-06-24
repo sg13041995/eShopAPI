@@ -1,0 +1,481 @@
+{
+	"info": {
+		"_postman_id": "f25c52a8-8af4-4fc3-a6ea-bd8b4fb1c444",
+		"name": "eShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "User Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"user1@gmail.com\",\r\n    \"password\" : \"user1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"user1@gmail.com\",\r\n    \"password\" : \"user1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Specific User (Admin)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXNob3AuY29tIiwiYWRtaW5JZCI6IjYyNjZkODhkOWU4NjAwNDhkNGQ5MTU3YSIsImlhdCI6MTY1MDkwNzQ4MCwiZXhwIjoxNjUwOTExMDgwfQ.dWB7WJd3HmD6iX0OMBm0rDZ3aAWBU2ATMCeL_INbib0",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/users/6266e014273b30fd91e8da6d",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"6266e014273b30fd91e8da6d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "Admin Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"superadmin@eshop.com\",\r\n    \"password\" : \"superadmin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/admins/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admins",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"superadmin@eshop.com\",\r\n    \"password\" : \"superadmin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/admins/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admins",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Specific Admin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/admins/6266d88d9e860048d4d9157a",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"admins",
+								"6266d88d9e860048d4d9157a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Create New Product (Admin)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXNob3AuY29tIiwiYWRtaW5JZCI6IjYyNjZkODhkOWU4NjAwNDhkNGQ5MTU3YSIsImlhdCI6MTY1MDkwNzQ4MCwiZXhwIjoxNjUwOTExMDgwfQ.dWB7WJd3HmD6iX0OMBm0rDZ3aAWBU2ATMCeL_INbib0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "First Product",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "This is our first product. This is a Simple Machine.",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "99",
+									"type": "default"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/Local_File_System/Proprietary/Created_Resources/Course/C_Cpp_Arduino/C_Cpp_Arduino_Manual/simple_machines.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all products (Open)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Product (Open)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/products/6266daa2c24960a130c69d9e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"6266daa2c24960a130c69d9e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Specific Product (Admin)",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXNob3AuY29tIiwiYWRtaW5JZCI6IjYyNjZkODhkOWU4NjAwNDhkNGQ5MTU3YSIsImlhdCI6MTY1MDkwNzQ4MCwiZXhwIjoxNjUwOTExMDgwfQ.dWB7WJd3HmD6iX0OMBm0rDZ3aAWBU2ATMCeL_INbib0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    [\r\n        {\r\n       \"propName\" : \"title\",\r\n       \"value\" : \"Modified first product name\"\r\n        },\r\n        {\r\n       \"propName\" : \"price\",\r\n       \"value\" : \"599\"\r\n        }\r\n    ]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/products/6266daa2c24960a130c69d9e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"6266daa2c24960a130c69d9e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Specific Product (Admin)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXNob3AuY29tIiwiYWRtaW5JZCI6IjYyNjZkODhkOWU4NjAwNDhkNGQ5MTU3YSIsImlhdCI6MTY1MDkwNzQ4MCwiZXhwIjoxNjUwOTExMDgwfQ.dWB7WJd3HmD6iX0OMBm0rDZ3aAWBU2ATMCeL_INbib0",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/products/6266db0fc24960a130c69da0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"6266db0fc24960a130c69da0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "Get all orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXNob3AuY29tIiwiYWRtaW5JZCI6IjYyNjZkODhkOWU4NjAwNDhkNGQ5MTU3YSIsImlhdCI6MTY1MDkwNzQ4MCwiZXhwIjoxNjUwOTExMDgwfQ.dWB7WJd3HmD6iX0OMBm0rDZ3aAWBU2ATMCeL_INbib0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/orders/all",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place Order (User)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsInVzZXJJZCI6IjYyNjZkZjRjMjczYjMwZmQ5MWU4ZGE2NyIsImlhdCI6MTY1MDkwOTEwNCwiZXhwIjoxNjUwOTEyNzA0fQ.ymYCQ0RWd-MS7rv814UU4zTl3blAfvyXaNkF4vdlmEU",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\": \"6266daa2c24960a130c69d9e\",\r\n    \"quantity\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Order Details (Admin)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN1cGVyYWRtaW5AZXNob3AuY29tIiwiYWRtaW5JZCI6IjYyNjZkODhkOWU4NjAwNDhkNGQ5MTU3YSIsImlhdCI6MTY1MDkwNzQ4MCwiZXhwIjoxNjUwOTExMDgwfQ.dWB7WJd3HmD6iX0OMBm0rDZ3aAWBU2ATMCeL_INbib0",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/orders/6266e2d19a731b017fce5346",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"6266e2d19a731b017fce5346"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific User All Orders (User)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsInVzZXJJZCI6IjYyNjZkZjRjMjczYjMwZmQ5MWU4ZGE2NyIsImlhdCI6MTY1MDkwOTEwNCwiZXhwIjoxNjUwOTEyNzA0fQ.ymYCQ0RWd-MS7rv814UU4zTl3blAfvyXaNkF4vdlmEU",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Specific Order (User)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsInVzZXJJZCI6IjYyNjZkZjRjMjczYjMwZmQ5MWU4ZGE2NyIsImlhdCI6MTY1MDkwOTEwNCwiZXhwIjoxNjUwOTEyNzA0fQ.ymYCQ0RWd-MS7rv814UU4zTl3blAfvyXaNkF4vdlmEU",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/orders/6266e2d19a731b017fce5346",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"orders",
+								"6266e2d19a731b017fce5346"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

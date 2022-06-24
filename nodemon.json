@@ -1,0 +1,9 @@
+{
+    "env": {
+        "PORT": 3000,
+        "MONGO_ATLAS_PW": "Enter your corresponding password",
+        "MONGO_ATLAS_DB": "Enter your corresponding database name",
+        "JWT_KEY_ADMIN": "r8q,+&1LM3)CD*zAGpx1xm{NeQhc;#",
+        "JWT_KEY_USER": "H&7j0O+*{Pl57;@xU72,;o)hR(&s#a"
+    }
+}
