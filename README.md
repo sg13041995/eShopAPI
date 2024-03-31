@@ -1,4 +1,4 @@
-# eShop_
+# eShopAPI
 
 This is an eCommerce RESTful API written in Nodejs. This API is designed to utilize the association of MongoDB Atlast as database. It has core features like signup, login for users and admins separately. It has order and product related routes with authentication and authorization implemented. For example, only Admin can create, update, delete products. Any client can view all the available products but only authorized or logged in users can place orders, view orders etc.
 
